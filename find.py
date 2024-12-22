@@ -1,6 +1,15 @@
+#!/usr/bin/env python3  # Shebang for Linux users to run the script directly
+
 import requests
 from bs4 import BeautifulSoup
 import re
+import pyfiglet
+import os  # To handle cross-platform paths
+
+def print_sudo_su_logo():
+    # Generate ASCII art for "sudo su"
+    ascii_art = pyfiglet.figlet_format("sudo su", font="slant")  # You can change the font if desired
+    print(ascii_art)
 
 def find_api_documentation(url):
     try:
@@ -60,6 +69,11 @@ def find_api_documentation(url):
     except requests.exceptions.RequestException as e:
         print(f"Error fetching URL {url}: {e}")
 
-# Example usage: 
+# Main script execution
+print_sudo_su_logo()  # Display the custom "sudo su" ASCII art
+
+# Ask for URL input from the user
 url_input = input("Enter a URL to check for API documentation: ")
+
+# Call the function to check for API documentation
 find_api_documentation(url_input)
