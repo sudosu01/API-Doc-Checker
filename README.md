@@ -10,6 +10,10 @@ Make sure you have Python 3 installed on your machine.
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/sudo/api-doc-finder.git
-   cd api-doc-finder
+   ```bash[
+   git clone https://github.com/sudo/api-doc-finder.git](https://github.com/sudosu01/API-Doc-Checker.git)
+   cd api-Doc-Checker
+   ls
+   python api.py
+   enter url
+   
